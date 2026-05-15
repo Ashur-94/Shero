@@ -24,8 +24,6 @@ const GALLERY_IMAGES = [
   "https://i.ibb.co/SwZ4B1GR/photo-10-15-05-2026-22-13-47-thumb.jpg",
   "https://i.ibb.co/Y4nfK5pf/photo-11-15-05-2026-22-13-47-thumb.jpg",
   "https://i.ibb.co/LhN0Yr5V/photo-12-15-05-2026-22-13-47-thumb.jpg",
-  "https://i.ibb.co/fwzxq2p/photo-1-15-05-2026-13-41-48-thumb.jpg",
-  "https://i.ibb.co/3y7PLHg9/photo-2-15-05-2026-14-57-45-thumb.jpg",
   "https://i.ibb.co/S4nnrBqk/photo-3-15-05-2026-22-13-47-thumb.jpg",
   "https://i.ibb.co/dsbZnQwq/photo-38-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/gb20SkVY/photo-39-15-05-2026-22-13-56.jpg",
@@ -33,7 +31,6 @@ const GALLERY_IMAGES = [
   "https://i.ibb.co/8gpJWxRy/photo-37-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/5hc9bHvT/photo-34-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/MyCJF8Ck/photo-35-15-05-2026-22-13-56.jpg",
-  "https://i.ibb.co/DFGphts/photo-33-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/j9mN4yY9/photo-31-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/LXgjx2X8/photo-32-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/4nR1PvjQ/photo-28-15-05-2026-22-13-56.jpg",
@@ -50,8 +47,8 @@ const GALLERY_IMAGES = [
   "https://i.ibb.co/hxvsDxwP/photo-20-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/nMKqxYgt/photo-17-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/sdbpnGNs/photo-18-15-05-2026-22-13-56.jpg",
-  "https://i.ibb.co/fGzH0Vj0/photo-16-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/LDSRTpjp/photo-15-15-05-2026-22-13-47.jpg",
+  "https://i.ibb.co/fGzH0Vj0/photo-16-15-05-2026-22-13-56.jpg",
   "https://i.ibb.co/prPBhPGN/photo-14-15-05-2026-22-13-47.jpg",
   "https://i.ibb.co/wFKFnKdc/photo-12-15-05-2026-22-13-47.jpg",
   "https://i.ibb.co/XkYdJbgM/photo-13-15-05-2026-22-13-47.jpg",
@@ -63,7 +60,6 @@ const GALLERY_IMAGES = [
   "https://i.ibb.co/v6qqj8c9/photo-7-15-05-2026-22-13-47.jpg",
   "https://i.ibb.co/xcHS60q/photo-4-15-05-2026-22-13-47.jpg",
   "https://i.ibb.co/Vc1YKrrj/photo-5-15-05-2026-22-13-47.jpg",
-  "https://i.ibb.co/PGhHX7HX/photo-2026-05-15-14-58-03.jpg",
   "https://i.ibb.co/BHqWVkW9/photo-3-15-05-2026-22-13-47.jpg",
   "https://i.ibb.co/0RjWv55B/photo-32-15-05-2026-22-13-56-thumb.jpg",
   "https://i.ibb.co/7dFM2H52/photo-33-15-05-2026-22-13-56-thumb.jpg",
@@ -390,17 +386,17 @@ export default function App() {
               className="absolute inset-0"
             />
             
-            <div className="relative w-full max-w-lg aspect-square">
+            <div className="relative w-full max-w-lg flex flex-col items-center">
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="w-full h-full rounded-[3rem] overflow-hidden shadow-2xl border border-white/10"
+                className="rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/10"
               >
                 <img 
                   src={selectedGalleryImage} 
                   alt="Gallery Preview"
-                  className="w-full h-full object-cover"
+                  className="max-h-[75vh] w-auto h-auto object-contain"
                   referrerPolicy="no-referrer"
                 />
               </motion.div>
